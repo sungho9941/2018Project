@@ -1,0 +1,15 @@
+1. where height >=180 and height <= 183; 
+2. 
+3. where height between 180 and 183;
+4. where addr in('gyeongnam', 'jeonnam', 'gyeongbug');
+6. where name like 'kim%';
+7. where name like '____JS';
+8.where height >= any(select height from userTbl where addr = 'gyeongnam');
+9. order by mDate;
+10.
+11. select addr from userTbl;
+12. order by addr;
+13. select distinct addr from userTbl;
+14.
+15. select userID as 'total count', sum(price*amount) as 'total' from buyTbl group by userID order by userID;
+16.select userID, avg(amount) as 'avg' from buyTbl group by userID;
